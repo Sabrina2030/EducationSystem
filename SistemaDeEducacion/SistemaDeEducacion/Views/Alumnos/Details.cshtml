@@ -1,0 +1,126 @@
+﻿@model List<AlumnosViewModel>
+
+<dd>
+    Nombre del alumno:
+</dd>
+
+@foreach (var item in Model)
+{
+    <dd>
+        @Html.DisplayFor(modelItem => item.Name)
+    </dd>
+    break;
+}
+
+<dd>
+    Apellido del alumno:
+</dd>
+
+@foreach (var item in Model)
+{
+    <dd>
+        @Html.DisplayFor(modelItem => item.LastName)
+    </dd>
+    break;
+}
+
+<dd>
+    Fecha de nacimiento:
+</dd>
+
+@foreach (var item in Model)
+{
+    <dd>
+        @Html.DisplayFor(modelItem => item.DateOfBirth)
+    </dd>
+    break;
+}
+
+<dd>
+    Sexo:
+</dd>
+
+@foreach (var item in Model)
+{
+    <dd>
+        @Html.DisplayFor(modelItem => item.Sexo)
+    </dd>
+    break;
+}
+
+<dd>
+    DNI:
+</dd>
+
+@foreach (var item in Model)
+{
+    <dd>
+        @Html.DisplayFor(modelItem => item.Dni)
+    </dd>
+    break;
+}
+
+<dd>
+    Direccion:
+</dd>
+
+@foreach (var item in Model)
+{
+    <dd>
+        @Html.DisplayFor(modelItem => item.Address)
+    </dd>
+    break;
+}
+
+<dd>
+    Fecha de Inicio de clases:
+</dd>
+
+@foreach (var item in Model)
+{
+    <dd>
+        @Html.DisplayFor(modelItem => item.FirstDay)
+    </dd>
+    break;
+}
+
+<dd>
+    Semestre:
+</dd>
+
+@foreach (var item in Model)
+{
+    <dd>
+        @Html.DisplayFor(modelItem => item.Semester)
+    </dd>
+    break;
+}
+
+<dd>
+    Carrera:
+</dd>
+
+@foreach (var item in Model)
+{
+    @foreach (var carrera in item.College)
+    {
+        <dd>
+            @Html.DisplayFor(modelItem => carrera.Name)
+        </dd>
+    }
+}
+
+<dd>
+    Materia:
+</dd>
+
+@foreach (var item in Model)
+{
+    @foreach (var curso in item.Course)
+    {
+        <dd>
+            @Html.DisplayFor(modelItem => curso.Name)
+        </dd>
+    }
+    break;
+}

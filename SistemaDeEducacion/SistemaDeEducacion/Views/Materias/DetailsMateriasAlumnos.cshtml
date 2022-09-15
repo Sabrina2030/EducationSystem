@@ -1,0 +1,58 @@
+﻿@model List<MateriaViewModel>
+
+<h4>
+    Materia:
+</h4>
+
+@foreach (var item in Model)
+{
+    <p>
+        @Html.DisplayFor(modelItem => item.Name)
+    </p>
+    break;
+}
+
+<h4>Alumnos:</h4>
+
+<h5>
+    Nombre:
+</h5>
+
+@foreach (var item in Model)
+{
+    @foreach (var nombre in item.Students)
+    {
+        <p>
+            @Html.DisplayFor(modelItem => nombre.Name)
+        </p>
+    }
+}
+
+<h5>
+    Apellido:
+</h5>
+
+@foreach (var item in Model)
+{
+    @foreach (var apellido in item.Students)
+    {
+        <p>
+            @Html.DisplayFor(modelItem => apellido.LastName)
+        </p>
+    }
+}
+
+<h5>
+    DNI:
+</h5>
+
+@foreach (var item in Model)
+{
+    @foreach (var dni in item.Students)
+    {
+        <p>
+            @Html.DisplayFor(modelItem => dni.Dni)
+        </p>
+    }
+}
+

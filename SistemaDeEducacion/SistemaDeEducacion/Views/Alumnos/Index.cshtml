@@ -1,0 +1,28 @@
+﻿@model List<AlumnosViewModel>
+
+<table>
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>DNI</th>
+            <th>Fecha Nacimiento</th>
+            <th>sexo</th>
+            <th>Domicilio</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>@item.Name</td>
+            <td>@item.LastName</td>
+            <td>@item.Dni</td>
+            <td>@item.DateOfBirth</td>
+            <td>@item.Sexo</td>
+            <td>@item.Address</td>
+        </tr>
+        }
+    </tbody>
+</table>
+

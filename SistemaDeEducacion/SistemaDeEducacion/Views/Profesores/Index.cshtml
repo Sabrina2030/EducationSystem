@@ -1,0 +1,25 @@
+﻿@model List<ProfesorViewModel>
+
+<table>
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>DNI</th>
+            <th>Fecha Nacimiento</th>
+            <th>sexo</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.LastName</td>
+                <td>@item.Dni</td>
+                <td>@item.DateOfBirth</td>
+                <td>@item.Sexo</td>
+            </tr>
+        }
+    </tbody>
+</table>
